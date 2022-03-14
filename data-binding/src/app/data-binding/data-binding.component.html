@@ -1,0 +1,162 @@
+<!--- index.html -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  crossorigin="anonymous" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We">
+<section>
+
+  <!--article>
+    <h3> Interpolation / Interpolação</h3>
+    <p>String renderizada com interpolação: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{ 1+1 }}</p>
+    <p>Usando método getValor: {{ getValor() }}</p>
+    <p>Usando método boolean: {{ getCurtirCurso()}} e variável: {{ cursoAngular }}</p>  
+</article>
+
+<article>
+<h3>Property Binding</h3>
+<img src="{{ urlImagem2 }}">
+
+</article>
+
+<article>
+    <h3>Class e Style Binding</h3>
+
+    <div>
+        Selecione uma classe:
+        <select #classe (change)="0" >
+            <option value="alert-primary">Alert primary</option>
+            <option value="alert-secondary">Alert secondary</option>
+            <option value="alert-success">Success</option>
+            <option value="alert-danger">Danger</option>
+        </select> 
+        <br><br>
+
+        <div class="alert-primary" role="alert"
+        [class.alert-primary] = "classe.value == 'alert-primary'">
+            A primary alert! 
+          </div>
+          
+          <div class="alert-secondary" role="alert"
+          [class.alert-secondary] = "classe.value == 'alert-secondary'">
+            A simple secondary alert—check it out!
+          </div>
+          
+          <div class="alert-success" role="alert"
+          [class.alert-success] = "classe.value == 'alert-success'">
+            A simple success alert—check it out!
+          </div>
+          
+          <div class="alert-danger" role="alert"
+          [class.alert-danger] = "classe.value == 'alert-danger'">
+            A simple danger alert—check it out!
+          </div>
+          
+          <br><br>
+          <div class="{{classe.value}}" role="alert">
+            CORES MUDANDO
+          </div>
+
+          <div class="{{classe.value}}" role="alert"
+          [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+          TEXTO DE PERIGO
+          </div>
+          
+
+
+          <br><br>
+
+
+        <button type="button" class="btn btn-primary"
+          tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    Simple demo
+  </button>
+
+    </div>
+
+
+</article>
+
+</section>
+
+
+  <section class="event-binding">
+
+    <article>
+      <h3>Event-Binding</h3>
+      <div>
+        <button (click)="botaoClicado()" 
+        class="btn btn-primary">Click Here!
+      </button>
+
+      <br><br>
+
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor(campoInput.value)"
+      (blur)="salvarValor(campoInput.value)"
+      #campoInput />
+
+      <p>VALOR ATUAL: {{ valorAtual }}</p>
+      <p>VALOR SALVO: {{ valorSalvo }}</p>
+
+
+      <span
+      (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()"
+      [class.highLight]="isMouseOver">
+      PASSE O MOUSE SOBRE MIM</span>
+
+
+      </div>
+    </article>
+
+  </section>
+
+  <section class="two-way-binding">
+    <h3>Two-way data binding</h3>
+    <div>
+      <input type="text" 
+      [value]="name"
+      (input)="name = campoInput.value"
+      #campoInput
+      >
+     
+
+      <p>Você digitou: {{ name }}</p>
+      
+      <input type="text" 
+      [ngModel]= "name" 
+      (ngModelChange)= "name = $event"
+      />
+
+      <input type="text" [(ngModel)]="name">
+
+    </div>
+
+    
+    <br>
+    <h3>Testando em objeto</h3>
+    <br>
+
+    <div>
+
+
+      <input type="text" [(ngModel)]="person.name">
+      <input type="text" [(ngModel)]="person.idade">
+
+      <p>Meu nome é {{ person.name }} e idade é {{ person.idade }}</p>
+      
+
+    </div>
+  </section-->
+
+
+  <section class="input-output-properties">
+    <h3>Input/Output Properties</h3>
+    <div>
+
+
+      <app-curso [nome] ="nomeDoCurso"></app-curso>
+
+
+    </div>
+  </section>
