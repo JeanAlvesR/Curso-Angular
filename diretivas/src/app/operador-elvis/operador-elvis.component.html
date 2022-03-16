@@ -1,0 +1,6 @@
+<p>{{ tarefa.desc }}</p>
+<!--p>{{ tarefa.responsavel.nome }}</p    Dá erro, caso o objeto seja negativa -->
+<p>{{ tarefa.responsavel != null ? tarefa.responsavel.nome : '' }}</p> <!--Muito grande-->
+
+<p>{{ tarefa.responsavel?.usuario?.nome}}</p> <!--Colocar '?' é o operador elvis: Soluciona o problema de forma bonita e legível-->
+
