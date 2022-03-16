@@ -14,3 +14,18 @@
     Texto com highlight com cores customizadas.
 </p>
 
+
+<h5>Diretiva Estrutura customizada: ngElse </h5>
+
+<div *ngIf="mostrarCursos">
+    LISTA DE CURSOS AQUI.
+</div>
+
+<div *ngElse="mostrarCursos">
+    NÃO EXISTEM CURSOS PARA SEREM MOSTRADOS
+</div>
+
+<br>
+
+<button (click)="onMostrarCursos()" class="btn btn-dark">Mostrar ou não cursos</button>
+<br>
