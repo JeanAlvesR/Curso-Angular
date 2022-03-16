@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-diretiva-ngstyle',
@@ -6,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diretiva-ngstyle.component.css']
 })
 export class DiretivaNgstyleComponent implements OnInit {
+
+  ativo: boolean = false;
+  tamanhoFonte: number = 15;
+
+  jQuery: any;
+
+  mudarBotao() {
+    this.ativo = !this.ativo;
+  }
 
   constructor() { }
 
