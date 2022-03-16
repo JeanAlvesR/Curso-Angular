@@ -1,0 +1,17 @@
+<h1>
+    <i [class.bi-star]="!meuFavorito"
+    [class.bi-star-fill]="meuFavorito"
+    (click)="mudarMeuFavorito()"
+  ></i>
+</h1>
+<br><br><br>
+
+HERE! -> Não está funcionando...
+<h1>
+    <i [ngClass]="{
+        'class.bi-star': !meuFavorito,
+        'class.bi-star-fill': meuFavorito
+    }"
+    (click)="mudarMeuFavorito()"
+  ></i>
+</h1>
