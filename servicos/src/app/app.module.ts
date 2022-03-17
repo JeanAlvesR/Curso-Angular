@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CursosService } from './cursos/cursos.service';
 import { CriarCursoComponent } from './criar-curso/criar-curso.component';
+import { LogService } from './shared/log.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CriarCursoComponent } from './criar-curso/criar-curso.component';
     AppRoutingModule,
     CriarCursoModule
   ],
+  providers: [LogService],
   //providers: [CursosService], //Serviços injetados são colocados aqui
   bootstrap: [AppComponent]
 })
