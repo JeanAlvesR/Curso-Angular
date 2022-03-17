@@ -7,3 +7,16 @@
 <p>Data de lançamento: {{ livro.dataLancamento | date }} </p>
 <p>Url: {{ livro.url }} </p>
 <p>Livro: {{ livro | json}}</p>
+
+<h5>LISTA DE LIVROS</h5>
+<br>
+
+
+<input type="text" [(ngModel)]="verificador">
+
+
+<ul>
+    <li *ngFor="let liv of livros | filtroArray: verificador"> 
+        {{ liv }}
+    </li>
+</ul>

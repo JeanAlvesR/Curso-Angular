@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ExemplosPipesComponent implements OnInit {
 
 
+ verificador: string = '';
+
   livro: any = {
     titulo: 'H.P. Lovecraft - Medo Clássico - Vol. 1 - Cosmic Edition: O mestre dos mestres para todas as gerações',
     rating: 4.82365,
@@ -16,6 +18,8 @@ export class ExemplosPipesComponent implements OnInit {
     dataLancamento: new Date(2017, 11, 14),
     url: 'https://www.amazon.com.br/dp/8594540795/ref=cm_sw_r_tw_dp_75A4PJWN66VVDRHCVFM7' 
   }
+
+  livros: string[] = ["Harry Potter 1", "Harry Potter 2", "Harry Potter 3", "Lovecraft: The Call of Cthulhu"]
 
   constructor() { }
 
