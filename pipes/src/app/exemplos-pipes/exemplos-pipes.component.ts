@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -24,6 +24,10 @@ export class ExemplosPipesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  AddLivro(livro:any ) {
+    this.livros.push(livro);
   }
 
 }

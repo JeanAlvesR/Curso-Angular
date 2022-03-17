@@ -14,6 +14,11 @@
 
 <input type="text" [(ngModel)]="verificador">
 
+<br>
+<!--Tá com um bug, pois a lista não atualiza-->
+<input type="text" #novoValor>
+<button (click)="AddLivro(novoValor.value)">Add livro</button>
+
 
 <ul>
     <li *ngFor="let liv of livros | filtroArray: verificador"> 
