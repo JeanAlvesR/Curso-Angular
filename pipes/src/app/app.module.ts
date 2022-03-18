@@ -11,6 +11,7 @@ import { SettingsService } from './settings.service';
 import { getLocaleCurrencyCode, registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
 import { FiltroArrayPipe } from './filtro-array.pipe';
+import { FiltroArrayImpuroPipe } from './filtro-array-impuro.pipe';
 registerLocaleData(ptBr)
 
 @NgModule({
@@ -19,6 +20,7 @@ registerLocaleData(ptBr)
     ExemplosPipesComponent,
     CamelCasePipe,
     FiltroArrayPipe,
+    FiltroArrayImpuroPipe,
 
   ],
   imports: [
