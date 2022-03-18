@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -21,10 +23,19 @@ export class ExemplosPipesComponent implements OnInit {
 
   livros: string[] = ["Harry Potter 1", "Harry Potter 2", "Harry Potter 3", "Lovecraft: The Call of Cthulhu"]
 
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor Assíncrono'),2000) //2000 = 2s
+  });
+
+  valorAsync2 = interval(2000).pipe(map(valor => 'Valor assíncrono 2'));
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
   AddLivro(livro:any ) {
     this.livros.push(livro);
